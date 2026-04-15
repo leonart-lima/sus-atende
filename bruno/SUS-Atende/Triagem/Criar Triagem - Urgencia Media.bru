@@ -1,0 +1,31 @@
+meta {
+  name: Criar Triagem - Urgencia Media
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/api/v1/triagens
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "nomePaciente": "Ana Oliveira",
+    "cpf": "11122233344",
+    "idade": 42,
+    "telefone": "(11) 97777-7777",
+    "email": "ana@example.com",
+    "sintomas": "Dor moderada, tontura, vômito",
+    "temperatura": 38.8,
+    "diasComSintomas": 3,
+    "historicoMorbidades": "Hipertensão",
+    "sexo": "FEMININO"
+  }
+}
+
+headers {
+  Content-Type: application/json
+}
+

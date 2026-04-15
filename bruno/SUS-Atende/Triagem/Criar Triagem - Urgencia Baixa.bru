@@ -1,0 +1,30 @@
+meta {
+  name: Criar Triagem - Urgencia Baixa
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/v1/triagens
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "nomePaciente": "João Silva",
+    "cpf": "12345678901",
+    "idade": 35,
+    "telefone": "(11) 99999-9999",
+    "email": "joao@example.com",
+    "sintomas": "Dor de cabeça leve",
+    "temperatura": 37.2,
+    "diasComSintomas": 2,
+    "sexo": "MASCULINO"
+  }
+}
+
+headers {
+  Content-Type: application/json
+}
+

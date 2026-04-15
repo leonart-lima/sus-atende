@@ -1,0 +1,29 @@
+meta {
+  name: Criar Triagem - Dados Invalidos
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/api/v1/triagens
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "nomePaciente": "",
+    "cpf": "123",
+    "idade": -1,
+    "telefone": "",
+    "email": "email-invalido",
+    "sintomas": "",
+    "temperatura": 37.0,
+    "diasComSintomas": 1
+  }
+}
+
+headers {
+  Content-Type: application/json
+}
+
